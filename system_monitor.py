@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+### Author Li, Dec 2024
 """
-System Monitoring Script with Flexible Output Options by Li, Dec 2024
+System Monitoring Script with Flexible Output Options 
 """
 
 import psutil

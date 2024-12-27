@@ -1,0 +1,42 @@
+# System Monitor Configuration File
+# =================================
+
+# Resource Monitoring Thresholds
+# -----------------------------
+thresholds:
+  cpu: 80     # CPU usage threshold (percentage)
+  memory: 80  # Memory usage threshold (percentage)
+  disk: 80    # Disk usage threshold (percentage)
+
+# Monitoring Intervals
+# ------------------
+interval: 300         # Default check interval in seconds (5 minutes)
+alert_cooldown: 3600  # Time between alerts for the same issue (1 hour)
+
+# Email Notification Settings
+# -------------------------
+email:
+  smtp_server: "smtp.gmail.com"  # SMTP server address
+  smtp_port: 587                 # SMTP port (587 for TLS)
+  sender: "your-email@gmail.com" # Sender email address
+  password: "your-app-password"  # App-specific password (for Gmail)
+  recipient: "admin@example.com" # Alert recipient email
+
+# Output Configuration
+# ------------------
+output:
+  log_level: "INFO"     # Logging level (DEBUG, INFO, WARNING, ERROR)
+  console_colors: true  # Enable colored console output
+  log_file: true       # Enable logging to file
+  log_max_size: 10     # Maximum log file size in MB
+  log_backups: 5       # Number of backup log files to keep
+
+# Advanced Settings
+# ---------------
+advanced:
+  disk_paths:          # Paths to monitor for disk usage
+    - "/"             # Root directory
+    - "/home"         # Home directory
+  network_monitor: false    # Enable network monitoring (future feature)
+  process_monitor: false    # Enable process monitoring (future feature)
+  history_size: 10000      # Number of historical readings to keep
